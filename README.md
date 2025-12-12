@@ -64,3 +64,63 @@ Algoritma memilih langkah berikutnya berdasarkan **degree** (jumlah langkah vali
 
 ### SOAL 2
 <img width="877" height="502" alt="Screenshot 2025-12-12 at 22 00 29" src="https://github.com/user-attachments/assets/5a010e3e-bc23-4aab-a741-0cd0c98e1b4f" />
+
+## Deskripsi Program
+Program ini menyelesaikan masalah Largest Monotonically Increasing Subsequence (LMIS) menggunakan algoritma Dynamic Programming.
+
+LMIS adalah subsequence terpanjang dari sebuah urutan bilangan dimana setiap elemen lebih besar dari elemen sebelumnya (monoton naik).
+
+## Cara Penggunaan
+
+### 1. Menjalankan Program
+- Buka program dalam browser
+- Interface akan menampilkan form input
+
+### 2. Input
+- **Format Input**: Bilangan bulat dipisahkan dengan koma
+- **Contoh**: 4, 1, 13, 7, 0, 2, 8, 11, 3
+- Masukkan urutan bilangan pada kotak input
+- Klik tombol "Cari LMIS"
+
+### 3. Output
+Program akan menampilkan:
+- **Urutan Input**: Array bilangan yang dimasukkan
+- **LMIS**: Subsequence terpanjang yang monoton naik
+- **Panjang LMIS**: Jumlah elemen dalam LMIS
+- **Array DP**: Visualisasi panjang LMIS di setiap posisi
+- **Semua Solusi**: Jika ada lebih dari satu LMIS dengan panjang maksimal
+
+## Contoh
+
+### Input:
+```
+4, 1, 13, 7, 0, 2, 8, 11, 3
+```
+
+### Output:
+```
+Urutan Input: [4, 1, 13, 7, 0, 2, 8, 11, 3]
+LMIS: [1, 2, 8, 11]
+Panjang: 4
+```
+
+### Penjelasan:
+Dari urutan tersebut, subsequence [1, 2, 8, 11] adalah yang terpanjang dimana:
+- 1 < 2 < 8 < 11 (monoton naik)
+- Tidak ada subsequence lain yang lebih panjang dari 4 elemen
+
+## Algoritma
+- **Metode**: Dynamic Programming
+- **Time Complexity**: O(n²)
+- **Space Complexity**: O(n)
+
+## Struktur Data
+- **dp[i]**: Menyimpan panjang LMIS yang berakhir di index i
+- **parent[i]**: Menyimpan index elemen sebelumnya untuk rekonstruksi
+
+## Aplikasi
+Program ini berguna untuk:
+- Analisis data sekuensial
+- Optimasi urutan
+- Pemecahan masalah teori graf
+- Studi kasus algoritma Dynamic Programming
