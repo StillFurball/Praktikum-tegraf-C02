@@ -28,11 +28,8 @@ python knight_open.py
   - **Node merah** = Posisi akhir (langkah ke-64)
   - **Panah merah** menunjukkan jalur pergerakan
 - Animasi berjalan otomatis setelah program dimulai
-
-#### Fitur:
-- Animasi smooth dengan delay antar langkah (0.1 detik) 
-- Warna node memudahkan identifikasi start/end
 - 64 langkah dijamin (full Hamiltonian path)
+
 
 ---
 
