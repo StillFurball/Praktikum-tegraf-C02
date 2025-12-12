@@ -65,8 +65,8 @@ Algoritma memilih langkah berikutnya berdasarkan **degree** (jumlah langkah vali
 # Largest Monotonically Increasing Subsequence (LMIS) Solver
 
 ## Deskripsi
-Program ini menyelesaikan permasalahan mencari **Largest Monotonically Increasing Subsequence** dari sebuah urutan bilangan menggunakan pendekatan tree.<br>
-Apa itu Largest Monotonically Increasing Subsequence (LMIS)?<br>
+Program ini menyelesaikan permasalahan mencari **Largest Monotonically Increasing Subsequence** dari sebuah urutan bilangan menggunakan pendekatan tree.<br><br>
+# Apa itu Largest Monotonically Increasing Subsequence (LMIS)?<br>
 Largest Monotonically Increasing Subsequence (LMIS) adalah subsequence terpanjang yang dapat diambil dari suatu urutan bilangan tanpa mengubah urutannya, di mana setiap elemen dalam subsequence tersebut harus bernilai lebih besar daripada elemen sebelumnya sehingga membentuk urutan yang naik secara monoton.<br><br>
 Subsequence = ambil beberapa angka dari urutan asli, TANPA mengubah urutannya<br>
 Monotonically Increasing = setiap angka harus lebih besar dari angka sebelumnya<br>
