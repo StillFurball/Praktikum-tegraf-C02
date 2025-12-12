@@ -62,32 +62,47 @@ Algoritma memilih langkah berikutnya berdasarkan **degree** (jumlah langkah vali
 ### SOAL 2
 <img width="877" height="502" alt="Screenshot 2025-12-12 at 22 00 29" src="https://github.com/user-attachments/assets/5a010e3e-bc23-4aab-a741-0cd0c98e1b4f" />
 
-## Deskripsi Program
-Program ini menyelesaikan masalah Largest Monotonically Increasing Subsequence (LMIS) menggunakan algoritma Dynamic Programming.
+# Largest Monotonically Increasing Subsequence (LMIS) Solver
 
-LMIS adalah subsequence terpanjang dari sebuah urutan bilangan dimana setiap elemen lebih besar dari elemen sebelumnya (monoton naik).
+## Deskripsi
+Program ini menyelesaikan permasalahan mencari **Largest Monotonically Increasing Subsequence** dari sebuah urutan bilangan menggunakan pendekatan tree.
+Apa itu Largest Monotonically Increasing Subsequence (LMIS)?
+Largest Monotonically Increasing Subsequence (LMIS) adalah subsequence terpanjang yang dapat diambil dari suatu urutan bilangan tanpa mengubah urutannya, di mana setiap elemen dalam subsequence tersebut harus bernilai lebih besar daripada elemen sebelumnya sehingga membentuk urutan yang naik secara monoton.
+Subsequence = ambil beberapa angka dari urutan asli, TANPA mengubah urutannya
+Monotonically Increasing = setiap angka harus lebih besar dari angka sebelumnya
+Largest = cari yang paling panjang
 
 ## Cara Penggunaan
 
 ### 1. Menjalankan Program
-- Buka program dalam browser
-- Interface akan menampilkan form input
+```bash
+python lmis.py
+```
 
 ### 2. Input
-- **Format Input**: Bilangan bulat dipisahkan dengan koma
-- **Contoh**: 4, 1, 13, 7, 0, 2, 8, 11, 3
-- Masukkan urutan bilangan pada kotak input
-- Klik tombol "Cari LMIS"
+- Program akan meminta input berupa urutan bilangan
+- Bilangan dapat dipisahkan dengan **spasi** atau **koma**
+- Contoh input yang valid:
+  ```
+  4, 1, 13, 7, 0, 2, 8, 11, 3
+  ```
+  atau
+  ```
+  4 1 13 7 0 2 8 11 3
+  ```
 
 ### 3. Output
 Program akan menampilkan:
-- **Urutan Input**: Array bilangan yang dimasukkan
-- **LMIS**: Subsequence terpanjang yang monoton naik
-- **Panjang LMIS**: Jumlah elemen dalam LMIS
-- **Array DP**: Visualisasi panjang LMIS di setiap posisi
-- **Semua Solusi**: Jika ada lebih dari satu LMIS dengan panjang maksimal
+- Urutan bilangan yang diinput
+- Panjang subsequence terpanjang yang ditemukan
+- Jumlah solusi yang ditemukan
+- Semua solusi LMIS yang memiliki panjang maksimal
 
-## Contoh
+### 4. Opsi Tambahan
+- Setelah hasil ditampilkan, program menawarkan untuk menampilkan struktur tree
+- Ketik `y` untuk melihat struktur tree, atau `n` untuk skip
+
+## Contoh Penggunaan
 
 ### Input:
 ```
@@ -96,28 +111,40 @@ Program akan menampilkan:
 
 ### Output:
 ```
-Urutan Input: [4, 1, 13, 7, 0, 2, 8, 11, 3]
-LMIS: [1, 2, 8, 11]
-Panjang: 4
+============================================================
+LARGEST MONOTONICALLY INCREASING SUBSEQUENCE SOLVER
+============================================================
+
+Masukkan urutan bilangan (pisahkan dengan spasi atau koma):
+> 4, 1, 13, 7, 0, 2, 8, 11, 3
+
+Urutan bilangan: [4, 1, 13, 7, 0, 2, 8, 11, 3]
+
+============================================================
+HASIL:
+============================================================
+Panjang subsequence terpanjang: 4
+
+Jumlah solusi yang ditemukan: 4
+
+Solusi 1: [4, 7, 8, 11]
+Solusi 2: [1, 7, 8, 11]
+Solusi 3: [1, 2, 8, 11]
+Solusi 4: [0, 2, 8, 11]
+
+============================================================
 ```
 
-### Penjelasan:
-Dari urutan tersebut, subsequence [1, 2, 8, 11] adalah yang terpanjang dimana:
-- 1 < 2 < 8 < 11 (monoton naik)
-- Tidak ada subsequence lain yang lebih panjang dari 4 elemen
+## Penjelasan Algoritma
 
-## Algoritma
-- **Metode**: Dynamic Programming
-- **Time Complexity**: O(n²)
-- **Space Complexity**: O(n)
+1. **Build Tree**: Program membangun tree di mana setiap node merepresentasikan elemen dalam subsequence
+2. **Eksplorasi**: Untuk setiap elemen, ada 2 pilihan:
+   - Masukkan ke subsequence (jika nilainya lebih besar dari elemen terakhir)
+   - Skip elemen tersebut
+3. **Pencarian**: Program mencari semua path dari root ke leaf
+4. **Hasil**: Path dengan panjang maksimal adalah solusi LMIS
 
-## Struktur Data
-- **dp[i]**: Menyimpan panjang LMIS yang berakhir di index i
-- **parent[i]**: Menyimpan index elemen sebelumnya untuk rekonstruksi
-
-## Aplikasi
-Program ini berguna untuk:
-- Analisis data sekuensial
-- Optimasi urutan
-- Pemecahan masalah teori graf
-- Studi kasus algoritma Dynamic Programming
+## Catatan
+- Subsequence harus **monotonically increasing** (setiap elemen lebih besar dari elemen sebelumnya)
+- Bukan strictly increasing, jadi tidak boleh ada elemen yang sama atau lebih kecil
+- Program menemukan **semua** solusi yang memiliki panjang maksimal
