@@ -1,9 +1,12 @@
-# Praktikum-tegraf-C02
+  # Praktikum - Teori Graf - C02
 | Name           | NRP        | 
 | ---            | ---        | 
 | Rafi Attar Maulana | 5025241141 | 
 | Denzel Daniels | 5025241228 | 
 | Mohammad Najib Bahrudin | 5025241230 | 
+
+### SOAL 1
+<img width="665" height="498" alt="Screenshot 2025-12-12 at 21 59 51" src="https://github.com/user-attachments/assets/5162b0f1-af07-403e-b0a5-443fdd1f6914" />
 
 
 ### 1. **knight_open.py** - Open Tour (Animated)
@@ -58,3 +61,6 @@ python knight_closed2.py
 Algoritma memilih langkah berikutnya berdasarkan **degree** (jumlah langkah valid tersisa):
 - Pilih posisi dengan **degree terendah** (fewest onward moves)
 - Ini menghindarkan knight terjebak di area dengan sedikit pilihan
+
+### SOAL 2
+<img width="877" height="502" alt="Screenshot 2025-12-12 at 22 00 29" src="https://github.com/user-attachments/assets/5a010e3e-bc23-4aab-a741-0cd0c98e1b4f" />
